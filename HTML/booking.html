@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Massage</title>
+</head>
+<body style="background-color: beige;">
+
+
+
+    <div style="display: flex; align-items: flex-start; justify-content: left;">
+        <h1 style="margin-right: 20px; font-size: 25px;">Massolog</h1>
+        <img src="/HTML/images/Massolog_Logo.png" onclick="GoToHP()" alt="The Logo of Massolog" height="30" style="display: block; margin-top: 17px; ;">
+    </div>    
+    <hr style="height:px;">
+
+    <h1 style="text-align: center;">Book massage</h1>
+    <hr>
+
+    <form action="https://formspree.io/f/xldglpoj" method="POST">
+        <label for="fname">First name: </label>
+        <input type="text" id="fname" name="fname" placeholder="Max" required>
+
+        <br>
+        
+        <label for="wRoom">Which room: </label>
+        <select name="wRoom" id="wRoom" required onchange="handleRoomChange()">
+            <option value=""></option>
+            <option value="Bedroom">Bedroom</option>
+            <option value="Livingroom(Sofa)">Livingroom(Sofa)</option>
+            <option value="aElse">Somewhere else</option>
+        </select>
+        
+        <br>
+        
+        <div id="otherRoomInput" style="display: none;">
+            <label for="otherRoom">Which Room: </label>
+            <input type="text" id="otherRoom" name="otherRoom" placeholder="Outside">
+            <br>
+        </div>
+
+        <label for="time">Time: </label>
+        <input type="time" name="time" id="time" required>
+
+        <br>
+
+        <p>You need to pay after the massage</p>
+
+        <input type="submit" value="Book now!">
+    </form>
+    <script src="/HTML/javascript/click_logo.js" ></script>
+    <script src="/HTML/javascript/booking_any_room.js" ></script>
+</body>
+</html>
